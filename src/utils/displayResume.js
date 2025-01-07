@@ -1,29 +1,26 @@
-import {
-  HEADER,
-  PERSONAL_INFO,
-  SKILLS,
-  PROJECTS,
-  CONTACT,
-} from "../constants.js";
+import chalk from "chalk";
+import { passion } from "gradient-string";
+import { sleep } from "./helpers.js";
 
-export function displayResumeSection(section) {
-  console.clear(); // Clear the console for a fresh view
-  console.log(HEADER);
+const LINE_BREAK = "\n" + "-".repeat(50) + "\n";
 
-  switch (section) {
-    case "Personal Info":
-      console.log(PERSONAL_INFO);
-      break;
-    case "Skills":
-      console.log(SKILLS);
-      break;
-    case "Projects":
-      console.log(PROJECTS);
-      break;
-    case "Contact":
-      console.log(CONTACT);
-      break;
+export async function displayResumeSection(section, content, animated = true) {
+  console.clear();
+
+  const header = passion(`\n  ${section.toUpperCase()}  \n`);
+  console.log(header);
+  console.log(chalk.dim(LINE_BREAK)); // Divider
+
+  if (animated) {
+    for (const line of content.split("\n")) {
+      console.log(line);
+      await sleep(100); // Add a delay for each line
+    }
+  } else {
+    console.log(content);
   }
 
-  console.log("\nPress Enter to return to the menu...");
+  console.log(chalk.dim(LINE_BREAK));
+  await sleep(500);
+  console.log(chalk.green("\nPress Enter to return to the menu..."));
 }

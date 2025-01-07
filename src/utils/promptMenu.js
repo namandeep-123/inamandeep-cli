@@ -1,6 +1,14 @@
 import inquirer from "inquirer";
+import ora from "ora";
 import { displayResumeSection } from "./displayResume.js";
-import { MENU_OPTIONS } from "../constants.js";
+import {
+  PERSONAL_INFO,
+  SKILLS,
+  PROJECTS,
+  CONTACT,
+  MENU_OPTIONS,
+} from "../constants.js";
+import { fruit } from "gradient-string";
 
 export async function promptMenu() {
   let exit = false;
@@ -15,21 +23,25 @@ export async function promptMenu() {
       },
     ]);
 
+    const spinner = ora("Loading...").start();
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    spinner.stop();
+
     switch (option) {
       case "View Personal Info":
-        displayResumeSection("Personal Info");
+        await displayResumeSection("PERSONAL INFO", PERSONAL_INFO);
         break;
       case "View Skills":
-        displayResumeSection("Skills");
+        await displayResumeSection("SKILLS", SKILLS);
         break;
       case "View Projects":
-        displayResumeSection("Projects");
+        await displayResumeSection("PROJECTS", PROJECTS);
         break;
       case "Contact Me":
-        displayResumeSection("Contact");
+        await displayResumeSection("CONTACT", CONTACT);
         break;
       case "Exit":
-        console.log("Goodbye! 👋");
+        console.log(fruit("Goodbye! 👋 See you next time!"));
         exit = true;
         break;
     }

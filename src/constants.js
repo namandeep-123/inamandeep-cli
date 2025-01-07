@@ -1,7 +1,55 @@
 import chalk from "chalk";
+import { cristal } from "gradient-string";
 
-export const HEADER = `
-${chalk.bold.blue("Hey! Welcome to Namandeep's CLI Resume! 👋")}
+export const PERSONAL_INFO = `
+${chalk.bold("Name:")} Namandeep Singh
+${chalk.bold("Role:")} Associate Software Developer Engineer 
+${chalk.bold("Company:")} Refyne India
+${chalk.bold("Location:")} Bangalore
+`;
+
+export const SKILLS = `
+${chalk.bold(cristal("Languages"))}:
+  - C++, JavaScript, TypeScript, Python
+
+${chalk.bold(cristal("Frameworks"))}:
+  - Node.js, Express.js, NestJS
+  - NextJs, ReactJs, React Native
+
+${chalk.bold(cristal("Databases"))}:
+  - MySQL, MongoDB, PostgreSQL
+
+${chalk.bold(cristal("Others"))}:
+  - Docker, Kubernetes, AWS, CI/CD, Nginx
+`;
+
+export const PROJECTS = `
+${chalk.bold(cristal("1. Petscoob"))}:
+   ${chalk.cyanBright("An e-commerce platform for pet products and services.")}
+   ${chalk.yellow("Features:")} Grooming centers, Pet Products.
+
+${chalk.bold(cristal("2. Leetcode Cli"))}:
+   ${chalk.cyanBright("A npm package to fetch leetcode, gfg all stats")}
+   ${chalk.yellow("Features:")} animated cli, open urls.
+
+${chalk.bold(cristal("3. PremGames"))}:
+   ${chalk.cyanBright(
+     "integrates game API to provide you with a vast library of games from various genres and platforms"
+   )}
+   ${chalk.yellow("Features:")} show Upcoming games, search system.
+
+${chalk.bold(cristal("4. Blog Site"))}:
+   ${chalk.cyanBright(
+     "Personal blog sharing backend and architecture insights."
+   )}
+   ${chalk.yellow("Features:")} Docusaurus-based, deployed on Vercel.
+`;
+
+export const CONTACT = `
+${chalk.bold("X:")} https://x.com/inamandeep
+${chalk.bold("Email:")} namandeepsingh557@gmail.com
+${chalk.bold("Blog:")} https://blog.inamandeep.com
+${chalk.bold("Portfolio:")} https://yourportfolio.com
 `;
 
 export const MENU_OPTIONS = [
@@ -11,39 +59,3 @@ export const MENU_OPTIONS = [
   "Contact Me",
   "Exit",
 ];
-
-export const PERSONAL_INFO = `
-${chalk.bold("Name:")} Namandeep Singh
-${chalk.bold("Role:")} Associate Software Engineer
-${chalk.bold("Company:")} Refyne India
-${chalk.bold("Location:")} Bangalore
-`;
-
-export const SKILLS = `
-${chalk.bold("Languages:")} C++, JavaScript, TypeScript, Python
-${chalk.bold("Frameworks:")} Node.js, Express.js, NestJS
-${chalk.bold("Databases:")} MySQL, MongoDB, PostgreSQL
-${chalk.bold("Others:")} Docker, AWS, CI/CD
-`;
-
-export const PROJECTS = `
-1. ${chalk.cyan(
-  "Petscoob:"
-)} E-commerce platform for pet products, grooming, and daycare bookings.
-2. ${chalk.cyan(
-  "Slack Bot:"
-)} A tool-performing bot for querying data and making multiple tool calls.
-3. ${chalk.cyan(
-  "Collection Portal:"
-)} A backend system with secure interceptors for managing user data.
-4. ${chalk.cyan(
-  "Blog Site:"
-)} A personal blog to share technical knowledge about architecture and backend development.
-`;
-
-export const CONTACT = `
-${chalk.bold("Twitter:")} https://twitter.com/yourhandle
-${chalk.bold("Email:")} your-email@example.com
-${chalk.bold("Blog:")} https://yourblog.com
-${chalk.bold("Portfolio:")} https://yourportfolio.com
-`;
