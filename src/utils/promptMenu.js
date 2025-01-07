@@ -7,6 +7,7 @@ import {
   PROJECTS,
   CONTACT,
   MENU_OPTIONS,
+  EXPERIENCE,
 } from "../constants.js";
 import { fruit } from "gradient-string";
 
@@ -36,6 +37,9 @@ export async function promptMenu() {
         break;
       case "View Projects":
         await displayResumeSection("PROJECTS", PROJECTS);
+        break;
+      case "Experience":
+        await displayResumeSection("EXPERIENCE", EXPERIENCE);
         break;
       case "Contact Me":
         await displayResumeSection("CONTACT", CONTACT);
