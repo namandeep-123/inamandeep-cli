@@ -8,6 +8,7 @@ import {
   CONTACT,
   MENU_OPTIONS,
   EXPERIENCE,
+  HEADER,
 } from "../constants.js";
 import { fruit } from "gradient-string";
 
@@ -15,6 +16,7 @@ export async function promptMenu() {
   let exit = false;
 
   while (!exit) {
+    console.log(HEADER);
     const { option } = await inquirer.prompt([
       {
         type: "list",

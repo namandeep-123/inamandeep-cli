@@ -1,6 +1,10 @@
 import chalk from "chalk";
 import { cristal } from "gradient-string";
 
+export const HEADER = `
+${chalk.bold.blue("Hey! Welcome to Namandeep's CLI Resume! 👋")}
+`;
+
 export const PERSONAL_INFO = `
 ${chalk.bold("Name:")} Namandeep Singh
 ${chalk.bold("Role:")} Associate Software Developer Engineer 

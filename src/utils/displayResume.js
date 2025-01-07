@@ -2,7 +2,7 @@ import chalk from "chalk";
 import { passion } from "gradient-string";
 import { sleep } from "./helpers.js";
 
-const LINE_BREAK = "\n" + "-".repeat(50) + "\n";
+const LINE_BREAK = "-".repeat(50);
 
 export async function displayResumeSection(section, content, animated = true) {
   console.clear();
@@ -22,5 +22,5 @@ export async function displayResumeSection(section, content, animated = true) {
 
   console.log(chalk.dim(LINE_BREAK));
   await sleep(500);
-  console.log(chalk.green("\nPress Enter to return to the menu..."));
+  // console.log(chalk.green("\nPress Enter to return to the menu..."));
 }
