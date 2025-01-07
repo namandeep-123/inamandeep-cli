@@ -95,7 +95,7 @@ export const CONTACT = `
 ${chalk.cyan("X:")} https://x.com/inamandeep
 ${chalk.cyan("Email:")} namandeepsingh557@gmail.com
 ${chalk.cyan("Blog:")} https://blog.inamandeep.com
-${chalk.cyan("Portfolio:")} https://yourportfolio.com
+${chalk.cyan("Portfolio:")} https://blog.inamandeep.com
 `;
 
 export const MENU_OPTIONS = [
