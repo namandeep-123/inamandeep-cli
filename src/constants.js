@@ -7,7 +7,7 @@ ${chalk.bold.blue("Hey! Welcome to Namandeep's CLI Resume! 👋")}
 
 export const PERSONAL_INFO = `
 ${chalk.bold("Name:")} Namandeep Singh
-${chalk.bold("Role:")} Associate Software Developer Engineer 
+${chalk.bold("Role:")} Software Developer Engineer - 1
 ${chalk.bold("Company:")} Refyne India
 ${chalk.bold("Location:")} Bangalore
 `;
@@ -60,7 +60,7 @@ ${chalk.cyan("Refyne - Backend Intern")}:
   – Enhanced user communication and HR-related email management by automating email 
   sending from user accounts through the Gmail and Outlook APIs.
 
-${chalk.cyan("FastHR.Ai - Backend Intern")}:
+${chalk.cyan("DRDO - Backend Intern")}:
   – Developed a robust authentication system using Node.js and JWT tokens, 
   where users verify their identity through Aadhar card and OTP verification.
 
