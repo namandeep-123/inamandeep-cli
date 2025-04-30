@@ -8,7 +8,7 @@ ${chalk.bold.blue("Hey! Welcome to Namandeep's CLI Resume! 👋")}
 export const PERSONAL_INFO = `
 ${chalk.bold("Name:")} Namandeep Singh
 ${chalk.bold("Role:")} Software Developer Engineer - 1
-${chalk.bold("Company:")} Refyne India
+${chalk.bold("Company:")} Amazon
 ${chalk.bold("Location:")} Bangalore
 `;
 
@@ -28,7 +28,10 @@ ${chalk.bold(cristal("Others"))}:
 `;
 
 export const EXPERIENCE = `
-${chalk.cyan("Refyne - ASDE")}:
+${chalk.cyan("Amazon - SDE")}:
+  - Just Started ;)
+  
+${chalk.cyan("Refyne - SDE")}:
   – Implemented a robust payment infrastructure for B2C transactions using Cashfree, 
   enabling seamless payment link gen- eration for various NBFCs based on lender-specific 
   configurations.
